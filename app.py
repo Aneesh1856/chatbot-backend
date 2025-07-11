@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 # Allow CORS only from the frontend origin
-CORS(app, origins=["http://localhost:3000"])
+CORS(app, origins=["http://localhost:3000" , "https://chatbot-frontend-mwly.onrender.com"])
 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel("gemini-1.5-flash")
