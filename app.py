@@ -23,3 +23,6 @@ def chat():
 
 if __name__ == "__main__":
     app.run(debug=True)
+@app.route('/', methods=['GET'])
+def home():
+    return "Gemini Chatbot Backend is running."
